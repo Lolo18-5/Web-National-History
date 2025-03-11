@@ -1,0 +1,663 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:  Poppins, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    background-image:  linear-gradient(
+        #0005, #0008
+    ), url(otra_0.jpeg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    min-height: 100vh;
+    display: flex;
+    align-items: center
+}
+
+.menu {
+    position: absolute; 
+    top: 0;
+    right: 0;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: #fffdfc;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a {
+    font-size: 18px;
+    padding: 20px;
+    font-weight:600 ;
+    display: block;
+    color: #fffdfc;
+    transition:  color .3s ;
+}
+
+.menu .navbar ul li a:hover {
+    color: #b30000;
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono {
+    width: 25px;
+}
+
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+.header-content {
+    text-align: center;
+}
+
+.header-content p {
+    color: #c5c5c5; 
+    padding: 0 235px;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.header-content h1 {
+        text-transform: uppercase;
+        color: #fffdfc;
+        font-size: 70px;
+        margin-bottom: 35px;
+        line-height: 80px;
+}
+
+            :root {
+                --red: #e74c3c;
+                --turquoise: #1abc9c;
+                --blue: #3498db;
+            }
+            
+            /* Estilos base para los botones */
+            .btn {
+                
+                box-sizing: border-box;
+                appearance: none;
+                background-color: transparent;
+                border: 2px solid var(--red);
+                border-radius: 0.6em;
+                color: var(--red);
+                cursor: pointer;
+                align-self: center;
+                font-size: 1rem;
+                font-weight: 700;
+                line-height: 1;
+                margin: 20px;
+                padding: 1.2em 2.8em;
+                text-decoration: none;
+                text-align: center;
+                text-transform: uppercase;
+                font-family: 'Montserrat', sans-serif;
+                transition: all 150ms ease-in-out;
+            }
+            
+            
+            .btn.third {
+                border-color: var(--blue);
+                color: #fff;
+                box-shadow: 0 0 40px 40px var(--blue) inset, 0 0 0 0 var(--blue);
+            }
+            
+            
+            .btn:hover,
+            .btn:focus {
+                color: #fff;
+                outline: 0;
+            }
+            
+            
+            .btn.third:hover {
+                box-shadow: 0 0 10px 0 var(--blue) inset, 0 0 10px 4px var(--blue);
+            }
+
+
+            .image {
+                display: flex;
+                width: 1000px;
+                height: 430px;
+                margin-bottom: 45px;
+                margin-top: 40px;
+            }
+    
+            .image img {
+                width: 0px;
+                flex-grow: 1;
+                object-fit: cover;
+                opacity: .8;
+                transition: .5s ease;
+            }
+
+            .image img:hover {
+                cursor: crosshair;
+                width: 300px;
+                opacity: 1;
+                filter: contrast(120%);
+            }
+
+            .image a {
+                display: none;
+            }
+
+        
+
+            .image-gallery {
+
+                padding: 100px;
+                background-color: #dad5d5;
+            }
+
+            .image-content {
+                max-width: 1000px;
+                text-align: center;
+            }
+
+            .image-content h3 {
+                font-size: 42px;
+                font-weight: 600;
+                font-family: Poppins, sans-serif;
+            }
+
+            .image-content p {
+                font-size: 18px;
+                font-weight: 400;
+                margin-top: 30px;
+            }
+            
+
+            @keyframes show {
+
+                0% {
+                    opacity: 0;
+                    scale: 25%;
+            
+                }
+            
+                100% {
+                    opacity: 1;
+                    scale: 100%;
+                }
+            }
+            
+            
+            .figure-section img  {
+                    view-timeline-name: --image;
+                    view-timeline-axis: block;
+            
+                    animation-timeline: --image;
+                    animation-name: show;
+            
+                    animation-range: entry 0% cover 45%;
+            
+            
+            }
+    
+        
+            
+    .figures-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 20px;
+        padding: 20px;
+        background-color: #f9f9f9;
+    }
+
+
+    .figure-card {
+        width: 300px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        text-align: center;
+        z-index: 100;
+        
+    }
+
+    .figure-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+
+    .figure-card img {
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+        border-bottom: 2px solid #eee;
+        object-position: top center;
+    }
+
+
+    .figure-card h3 {
+        margin: 15px 0 10px;
+        font-size: 1.5em;
+        color: #333;
+    }
+
+
+    .figure-card p {
+        padding: 0 15px 20px;
+        font-size: 1em;
+        color: #666;
+        line-height: 1.5;
+    }
+
+
+
+
+/* Estilos generales para la sección */
+.figure-section {
+    max-width: 800px; /* Ancho máximo para que no ocupe toda la pantalla */
+    margin: 40px auto; /* Centrado en la página */
+    padding: 20px;
+    text-align: center; 
+}
+
+
+.figure-image img {
+    width: 100%; 
+    max-width: 600px; 
+    object-fit: cover;
+    object-position: 50% 20%;
+    height: 500px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+
+.figure-content {
+    margin-top: 20px;
+    max-width: 1200px;
+}
+
+.figure-content h2 {
+    font-size: 2.5em; 
+    color: #333; 
+    margin-bottom: 15px;
+}
+
+.figure-content p {
+    font-size: 1.1em;
+    color: #444;
+    line-height: 1.8;
+    text-align: justify; /* Justifica el texto */
+    hyphens: auto; /* Añade guiones para evitar espacios grandes */
+    margin-bottom: 20px; }
+
+                .carousel {
+                    position: relative;
+                    width: 400px; /* Ajusta el tamaño según tu necesidad */
+                    margin: auto;
+                    text-align: center;
+                    margin-top: 130px;
+                    margin-bottom: 130px;
+                }
+                
+                .carousel-content {
+                    position: relative;
+                }
+                
+                .carousel-content img {
+                    width: 380px;
+                    height: 210px;
+                    border-radius: 10px;
+                }
+                
+                .carousel-content p {
+                    margin-top: 10px;
+                    font-size: 16px;
+                }
+                
+                .carousel-arrow {
+                    position: absolute;
+                    top: 48%;
+                    transform: translateY(-50%);
+                    background-color: rgba(0, 0, 0, 0.8);
+                    color: white;
+                    border: none;
+                    cursor: pointer;
+                    padding: 11px;
+                    border-radius: 50%;
+                }
+                
+                .carousel-arrow.prev {
+                    left: -30px;
+                }
+                
+                .carousel-arrow.next {
+                    right: -30px;
+                }
+                
+                .carousel-indicators {
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 10px;
+                }
+                
+                .carousel-indicators .indicator {
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    border: 1px solid #000;
+                    margin: 0 5px;
+                    cursor: pointer;
+                }
+                
+                .carousel-indicators .indicator.active {
+                    background-color: #000;
+                }
+
+
+                /* Botón de Scroll to Top */
+.scroll-to-top {
+    position: fixed;
+    top: -60px; /* Inicialmente fuera de la pantalla */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: rgba(179, 0, 0, 0.9); /* Rojo oscuro con transparencia */
+    opacity: .3;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: top 0.5s ease, background-color 0.3s ease, transform 0.3s ease, opacity 0.28s ease;
+    z-index: 1000;
+}
+
+.scroll-to-top.visible {
+    top: 20px; /* Margen desde el top */
+}
+
+.scroll-to-top:hover {
+    opacity: 1;
+    background-color: rgba(179, 0, 0, 1); /* Rojo oscuro sólido */
+    transform: translateX(-50%) scale(1.1);
+}
+
+.scroll-to-top .arrow {
+    transition: transform 0.3s ease;
+}
+
+.scroll-to-top:hover .arrow {
+    transform: translateY(-5px); /* Efecto de movimiento */
+}
+
+
+ /* Estilos para el Aside */
+#sidebar {
+    position: fixed;
+    top: 50%; /* Centrado verticalmente */
+    right: 20px; /* Margen desde el borde derecho */
+    transform: translateY(-20%); /* Ajuste para centrar */
+    width: 220px; /* Ancho del aside */
+    background: rgba(179, 0, 0, 0.9); /* Fondo rojo oscuro con transparencia */
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    opacity: 0; /* Inicialmente invisible */
+    transition: opacity 0.5s ease;
+    z-index: 10; /* Asegura que esté por encima de otros elementos */
+    font-family: 'Poppins', sans-serif; /* Coherencia con la tipografía */
+    padding: 15px;
+    margin-right: 28px;
+}
+
+#sidebar.visible {
+    opacity: 1; /* Se hace visible */
+}
+
+.sidebar-section {
+    margin-bottom: 20px; /* Separación entre secciones */
+    padding-bottom: 20px; /* Espacio interno */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Borde sutil entre secciones */
+}
+
+.sidebar-section:last-child {
+    margin-bottom: 0; /* Sin margen en la última sección */
+    border-bottom: none; /* Sin borde en la última sección */
+}
+
+.sidebar-section h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    font-weight: 600; /* Coherencia con los títulos de tu página */
+}
+
+.sidebar-section p {
+    font-size: 0.9em;
+    margin-bottom: 15px;
+    font-weight: 400; /* Coherencia con el texto de tu página */
+}
+
+.sidebar-button {
+    display: block;
+    padding: 10px;
+    background: white;
+    color: #b30000;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.sidebar-button:hover {
+    background: #b30000;
+    color: white;
+    border: 1px solid white;
+}
+
+/* Responsividad: Oculta el aside en móviles */
+@media (max-width: 768px) {
+    #sidebar {
+        display: none;
+    }
+}
+
+@media (max-width: 1024px) {
+    .header-content h1 {
+        font-size: 50px; /* Reducir el tamaño del título */
+        line-height: 60px;
+    }
+
+    .header-content p {
+        padding: 0 100px; /* Reducir el padding para tablets */
+    }
+
+    .image {
+        width: 90%; /* Ajustar el ancho de la galería de imágenes */
+        height: auto;
+        flex-wrap: wrap; /* Permitir que las imágenes se envuelvan */
+    }
+
+    .image img {
+        width: 45%; /* Mostrar 2 imágenes por fila */
+        margin-bottom: 10px;
+    }
+
+    .figure-section {
+        padding: 20px; /* Reducir el padding */
+    }
+
+    .figure-image img {
+        height: 400px; /* Reducir la altura de la imagen */
+    }
+
+    .figure-content h2 {
+        font-size: 2em; /* Reducir el tamaño del título */
+    }
+
+    .figure-content p {
+        font-size: 1em; /* Reducir el tamaño del texto */
+    }
+
+    .carousel {
+        width: 90%; /* Ajustar el ancho del carrusel */
+    }
+
+    .carousel-content img {
+        width: 100%; /* Hacer que la imagen ocupe todo el ancho */
+    }
+
+    .figures-gallery {
+        padding: 10px; /* Reducir el padding */
+    }
+
+    .figure-card {
+        width: 45%; /* Mostrar 2 tarjetas por fila */
+    }
+}
+
+/* Media Queries para móviles (hasta 767px) */
+@media (max-width: 767px) {
+    .header-content h1 {
+        font-size: 40px; /* Reducir aún más el tamaño del título */
+        line-height: 50px;
+    }
+
+    .header-content p {
+        padding: 0 20px; /* Reducir el padding para móviles */
+    }
+
+    .menu .navbar ul li {
+        float: none; /* Mostrar el menú en columna */
+        width: 100%;
+    }
+
+    .menu label {
+        display: block; /* Mostrar el ícono del menú */
+    }
+
+    .menu .navbar {
+        display: none; /* Ocultar el menú por defecto */
+        width: 100%;
+        text-align: center;
+    }
+
+    #menu:checked ~ .navbar {
+        display: block; /* Mostrar el menú cuando el checkbox está activado */
+    }
+
+    .image {
+        width: 100%; /* Ajustar el ancho de la galería de imágenes */
+        flex-direction: column; /* Mostrar las imágenes en columna */
+    }
+
+    .image img {
+        width: 100%; /* Mostrar 1 imagen por fila */
+        margin-bottom: 10px;
+    }
+
+    .figure-section {
+        padding: 10px; /* Reducir el padding */
+    }
+
+    .figure-image img {
+        height: 300px; /* Reducir la altura de la imagen */
+    }
+
+    .figure-content h2 {
+        font-size: 1.8em; /* Reducir el tamaño del título */
+    }
+
+    .figure-content p {
+        font-size: 0.9em; /* Reducir el tamaño del texto */
+    }
+
+    .carousel {
+        width: 100%; /* Ajustar el ancho del carrusel */
+    }
+
+    .carousel-content img {
+        width: 100%; /* Hacer que la imagen ocupe todo el ancho */
+    }
+
+    .figures-gallery {
+        padding: 5px; /* Reducir el padding */
+    }
+
+    .figure-card {
+        width: 100%; /* Mostrar 1 tarjeta por fila */
+    }
+
+    .scroll-to-top {
+        width: 40px; /* Reducir el tamaño del botón */
+        height: 40px;
+        font-size: 20px;
+    }
+
+    #sidebar {
+        display: none; /* Ocultar el aside en móviles */
+    }
+}
+
+/* Media Queries para pantallas pequeñas (hasta 480px) */
+@media (max-width: 480px) {
+    .header-content h1 {
+        font-size: 30px; /* Reducir aún más el tamaño del título */
+        line-height: 40px;
+    }
+
+    .header-content p {
+        font-size: 14px; /* Reducir el tamaño del texto */
+    }
+
+    .figure-image img {
+        height: 250px; /* Reducir la altura de la imagen */
+    }
+
+    .figure-content h2 {
+        font-size: 1.5em; /* Reducir el tamaño del título */
+    }
+
+    .figure-content p {
+        font-size: 0.8em; /* Reducir el tamaño del texto */
+    }
+
+    .carousel-content p {
+        font-size: 14px; /* Reducir el tamaño del texto */
+    }
+}
+
